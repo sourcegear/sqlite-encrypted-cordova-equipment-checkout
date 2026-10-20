@@ -11,7 +11,8 @@ The database passphrase is entered on the device and retained only in memory. Fo
 - A standalone Gradle command for Android
 - A SQLite.Encrypted activation key for the target platform
 
-You can request an evaluation key at [sqlite.sourcegear.com/#evaluation](http://sqlite.sourcegear.com/#evaluation).
+Free fully-featured demo keys are available from
+[sqlite.sourcegear.com](https://sqlite.sourcegear.com/#evaluation).
 
 ## Install
 
