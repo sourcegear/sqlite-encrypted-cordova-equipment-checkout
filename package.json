@@ -1,0 +1,29 @@
+{
+  "name": "sqlite-encrypted-cordova-equipment-checkout-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Encrypted equipment checkout app using Cordova and SQLite.Encrypted",
+  "scripts": {
+    "configure": "node scripts/configure.mjs",
+    "check": "node --check www/js/database.js && node --check www/js/app.js && node --check scripts/configure.mjs && node --check scripts/cordova.mjs",
+    "add:android": "npm run configure && node scripts/cordova.mjs platform add android --nosave && node scripts/cordova.mjs plugin add @sqlite-encrypted/cordova --nosave",
+    "add:ios": "npm run configure && node scripts/cordova.mjs platform add ios --nosave && node scripts/cordova.mjs plugin add @sqlite-encrypted/cordova --nosave",
+    "prepare:android": "npm run configure && node scripts/cordova.mjs prepare android",
+    "prepare:ios": "npm run configure && node scripts/cordova.mjs prepare ios",
+    "build:android": "npm run configure && node scripts/cordova.mjs build android",
+    "build:ios": "npm run configure && node scripts/cordova.mjs build ios",
+    "android": "npm run configure && node scripts/cordova.mjs run android",
+    "ios": "npm run configure && node scripts/cordova.mjs run ios"
+  },
+  "dependencies": {
+    "@sqlite-encrypted/cordova": "3.54.0"
+  },
+  "devDependencies": {
+    "cordova": "13.0.0",
+    "cordova-android": "15.1.0",
+    "cordova-ios": "8.1.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
